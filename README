@@ -1,0 +1,45 @@
+To run the project:
+---------------------
+npm i ( one time )
+npm run watch-ts
+(in a separate terminal)
+-------------------------
+npm run watch-node (in a separate terminal also)
+
+Use command below in case of port issue
+-------------------------------------------
+sudo killall -9 node
+
+API documentation
+--------------------------------------------
+https://documenter.getpostman.com/view/5772120/S17rwUfG
+
+Make sure you set up the following headers
+----------------------------------------------------
+Content-Type: application/x-www-form-urlencoded
+authorization: Bearer <Token>
+
+1.) BASE URL FOR ALL API END PONTS EXCLUDING FILES
+--------------------------------------------
+Base url
+http://ringa.tech:3200/api/v1/
+
+Base url + end point
+Example usage http://ringa.tech:3200/api/v1/users
+              http://ringa.tech:3200/api/v1/locations
+
+
+2.) BASE URL FOR ALL API END PONTS FOR UPLOADING FILES
+-------------------------------------------------------------------
+Base url                          End point
+http://ringa.tech/api/v1/auth/  + files      = http://ringa.tech/api/v1/auth/files
+
+
+Note:
+All end points are subjected to ( GET, POST, DELETE, UPDATE, PUST ) REST API verbs
+
+
+Test Cross Scripting Origin
+-------------------------------------------------------------------------------------------------------------------------------------------
+curl -i -H 'Origin: http://ringa.tech' \
+  'http://ringa.tech/api/v1/auth/files'
